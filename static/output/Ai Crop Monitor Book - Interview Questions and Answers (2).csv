@@ -1,0 +1,132 @@
+No.,Question,Answer
+1,"What is the primary goal of the AI Crop Monitoring & Agricultural Intelligence Platform, and what key AI capabilities does it integrate?","The primary goal of the AI Crop Monitoring & Agricultural Intelligence Platform is to be a professional-grade ecosystem for precision agriculture. It integrates computer vision, time-series forecasting, market analytics, explainable AI, and microfinance scoring."
+2,Describe the core architectural approach (combining edge and cloud) that makes this system both low-cost and scalable?,"The system combines edge computing (offline models on phones, Raspberry Pi, or drones) with cloud-based retraining (Google Colab, Kaggle, or free-tier cloud)."
+3,"You are tasked with conducting exploratory data analysis (EDA) and prototyping a new model. In which directory would you work, and what tools are typically used there?","Use notebooks/ for experiments in Google Colab or Jupyter. This includes exploratory data analysis (EDA), model prototyping, and initial training scripts."
+4,Where should production-ready code for modular components like recommendation engines and core business logic reside?,Src/
+5,Explain the purpose of the ai/ directory. Name two common formats for exporting models from this directory?,"The ai/ directory is used for training pipelines and model definitions, including scripts for model training, evaluation, and export. Two common formats for exporting models from this directory are ONNX and TFLite."
+6,"Which directory is dedicated to documentation for various stakeholders (farmers, administrators, deployment engineers), and what tools are suggested for generating this documentation?","The docs/ directory is used to store guides for farmers, administrators, and deployment engineers. Sphinx or MkDocs are suggested for generating documentation from Markdown files."
+7,"What types of tests are implemented in the tests/ directory, and what specific Python library is recommended for unit testing?","The tests/ directory implements unit, integration, and performance tests. Pytest is recommended for unit testing."
+8,Describe the typical use case for the backend/ directory within this project structure?,"The backend manages business logic, API endpoints, and background processing."
+9,"How does the platform support ""Camera Inputs"" from various devices, and what Python library is mentioned for local image processing?",Error generating answer: 'str' object has no attribute 'page_content'
+10,"Explain the significance of ""Explainable AI"" (XAI) in building trust with farmers. Name two specific XAI techniques mentioned and how they are applied?",Error generating answer: 'str' object has no attribute 'page_content'
+11,"How are ""Recommendations"" (e.g., pesticide, fertilizer) defined and generated, including the file format and library used for configuration?",Error generating answer: cannot schedule new futures after interpreter shutdown
+12,"Describe the ""Continuous Learning"" mechanism, detailing how farmer feedback is collected, stored, and used for model retraining?",Error generating answer: cannot schedule new futures after interpreter shutdown
+13,"How is ""Offline Mode"" achieved for edge inference, including the model formats, deployment targets, and local storage solution?",Error generating answer: cannot schedule new futures after interpreter shutdown
+14,"What technologies are used for ""Predictive Analytics"" like yield forecasting, and where are the trained models deployed for API access?",Error generating answer: cannot schedule new futures after interpreter shutdown
+15,"How does the platform provide ""Digital Finance"" services, and what type of models are used for loan recommendations?",Error generating answer: cannot schedule new futures after interpreter shutdown
+16,"What services are integrated for ""Notifications"" (WhatsApp, Email, SMS), and how are asynchronous sending and logging handled?",Error generating answer: cannot schedule new futures after interpreter shutdown
+17,"How does the platform ensure ""Scalability"" for multi-farm dashboards, and what orchestration tool is mentioned?",Error generating answer: cannot schedule new futures after interpreter shutdown
+18,"What specific measures are taken to ensure ""Compliance"" with GDPR-style logging, including data encryption and deletion requests?",Error generating answer: cannot schedule new futures after interpreter shutdown
+19,"How does the platform implement ""Edge AI & On-Farm Inference,"" and what runtime is used for cross-platform model execution?",Error generating answer: cannot schedule new futures after interpreter shutdown
+20,"Describe the ""Adaptive Treatment Optimization"" feature, including where historical actions are stored and what advanced ML technique might be used for retraining?",Error generating answer: cannot schedule new futures after interpreter shutdown
+21,"What components are combined to enable ""AI Pest/Disease Forecasting""?",Error generating answer: cannot schedule new futures after interpreter shutdown
+22,"Explain the ""Satellite + Drone Fusion"" capability, mentioning a specific satellite data source and a library used for image alignment?",Error generating answer: cannot schedule new futures after interpreter shutdown
+23,"How is the ""Farm Health Score"" calculated and displayed?",Error generating answer: cannot schedule new futures after interpreter shutdown
+24,"What is the strategy for ""AI Marketplace Integration""?",Error generating answer: cannot schedule new futures after interpreter shutdown
+25,"How does the platform incorporate ""Gamification & Community"" features, and where are user points tracked?",Error generating answer: cannot schedule new futures after interpreter shutdown
+26,"What is the purpose of ""Climate Analytics,"" and what API is mentioned for this?",Error generating answer: cannot schedule new futures after interpreter shutdown
+27,"Which technologies are used for ""Voice Interfaces"" for local languages, and how are voice command logs handled?",Error generating answer: cannot schedule new futures after interpreter shutdown
+28,"How are ""AR Overlays"" used to guide farmers visually, and where is AR metadata stored?",Error generating answer: cannot schedule new futures after interpreter shutdown
+29,"Describe the ""CI/CD for Models"" process, including the platform used and how model metadata is tracked?",Error generating answer: cannot schedule new futures after interpreter shutdown
+30,When should licensing and provenance be addressed?,Error generating answer: cannot schedule new futures after interpreter shutdown
+31,"How is dataset versioning managed, and what specific command is used?",Error generating answer: cannot schedule new futures after interpreter shutdown
+32,"What is required from farmers for data uploads, and where is this consent stored?",Error generating answer: cannot schedule new futures after interpreter shutdown
+33,When is annotation and label QA performed?,Error generating answer: cannot schedule new futures after interpreter shutdown
+34,What are the guidelines for image resolution and inter-annotator agreement?,Error generating answer: cannot schedule new futures after interpreter shutdown
+35,"When is data validation performed, and what specific tool is used for schema checks?",Error generating answer: cannot schedule new futures after interpreter shutdown
+36,How is data validation integrated into the CI/CD pipeline?,Error generating answer: cannot schedule new futures after interpreter shutdown
+37,"When are model cards created, and what information should they contain?",Error generating answer: cannot schedule new futures after interpreter shutdown
+38,"How is model tracking managed for multi-user access, and what tool is used?",Error generating answer: cannot schedule new futures after interpreter shutdown
+39,When is drift detection performed?,Error generating answer: cannot schedule new futures after interpreter shutdown
+40,"What tool is used to detect distribution drifts, and where are the reports stored?",Error generating answer: cannot schedule new futures after interpreter shutdown
+41,"Under what condition is model retraining triggered, and how is it automated?",Error generating answer: cannot schedule new futures after interpreter shutdown
+42,How are secrets stored and accessed in production?,Error generating answer: cannot schedule new futures after interpreter shutdown
+43,Describe the encryption strategy for data at rest and in transit?,Error generating answer: cannot schedule new futures after interpreter shutdown
+44,"What data retention policy is implemented, and how is old data purged?",Error generating answer: cannot schedule new futures after interpreter shutdown
+45,What are the target Service Level Objectives (SLOs) for latency and uptime?,Error generating answer: cannot schedule new futures after interpreter shutdown
+46,"Name three tools used for monitoring, and where are metrics stored?",Error generating answer: cannot schedule new futures after interpreter shutdown
+47,"What platform is used for CI/CD, and what checks are performed before merging to production?",Error generating answer: cannot schedule new futures after interpreter shutdown
+48,How is deployment blocked if model accuracy falls below a baseline?,Error generating answer: cannot schedule new futures after interpreter shutdown
+49,What deployment strategy is mentioned for safe rollouts with rollback triggers?,Error generating answer: cannot schedule new futures after interpreter shutdown
+50,"How is reproducibility ensured for training runs, including dependencies and seeds?",Error generating answer: cannot schedule new futures after interpreter shutdown
+51,What tools are used for dataset versioning with hashes?,Error generating answer: cannot schedule new futures after interpreter shutdown
+52,"Describe the backup strategy for MongoDB Atlas, including its Recovery Point Objective (RPO) and Recovery Time Objective (RTO)?",Error generating answer: cannot schedule new futures after interpreter shutdown
+53,"For a developer working on CNN/LSTM backpropagation, what specific mathematical areas are recommended, and what resource is suggested?",Error generating answer: cannot schedule new futures after interpreter shutdown
+54,"What machine learning models are recommended for market pricing and yield risk, and what Python library is mentioned for these?",Error generating answer: cannot schedule new futures after interpreter shutdown
+55,"List three key MLOps tools mentioned for experiment tracking, deployment, and monitoring?",Error generating answer: cannot schedule new futures after interpreter shutdown
+56,What techniques are suggested for reducing model size for Edge AI deployment?,Error generating answer: cannot schedule new futures after interpreter shutdown
+57,"What compliance topics are relevant, and what framework is mentioned for secure farmer login?",Error generating answer: cannot schedule new futures after interpreter shutdown
+58,"Which framework is recommended for rapid development of dashboards and prototypes, especially for data scientists?",Error generating answer: cannot schedule new futures after interpreter shutdown
+59,"What framework is used for production web applications, and what performance benefits does it offer?",Error generating answer: cannot schedule new futures after interpreter shutdown
+60,"What framework is used for cross-platform mobile apps, and what native capabilities does it enable?",Error generating answer: cannot schedule new futures after interpreter shutdown
+61,What visualization libraries are used for charts and maps?,Error generating answer: cannot schedule new futures after interpreter shutdown
+62,What state management libraries are suggested for complex states in Next.js/React Native?,Error generating answer: cannot schedule new futures after interpreter shutdown
+63,What technologies are used for AR and Voice in the web/mobile frontend?,Error generating answer: cannot schedule new futures after interpreter shutdown
+64,What specific features would a Farmer Dashboard include?,Error generating answer: cannot schedule new futures after interpreter shutdown
+65,What capabilities are provided for Cooperative Management?,Error generating answer: cannot schedule new futures after interpreter shutdown
+66,What kind of information is available in the Enterprise Console?,Error generating answer: cannot schedule new futures after interpreter shutdown
+67,"What mobile-specific features are highlighted, and how is offline storage handled on mobile?",Error generating answer: cannot schedule new futures after interpreter shutdown
+68,Where would you find the main Streamlit application file within the src/frontend/ directory?,Error generating answer: cannot schedule new futures after interpreter shutdown
+69,"In a Next.js application, where are routes and reusable UI components typically located?",Error generating answer: cannot schedule new futures after interpreter shutdown
+70,"Analyze the provided Streamlit code snippet. What is its purpose, and what specific backend endpoint does it interact with?",Error generating answer: cannot schedule new futures after interpreter shutdown
+71,"How are Streamlit, Next.js, and React Native applications typically deployed?",Error generating answer: cannot schedule new futures after interpreter shutdown
+72,What testing frameworks are suggested for unit and E2E tests in the frontend?,Error generating answer: cannot schedule new futures after interpreter shutdown
+73,What compliance aspect is emphasized for accessibility?,Error generating answer: cannot schedule new futures after interpreter shutdown
+74,What asynchronous API framework is used for high performance in the backend?,Error generating answer: cannot schedule new futures after interpreter shutdown
+75,What tool is used for asynchronous jobs like model training or scraping?,Error generating answer: cannot schedule new futures after interpreter shutdown
+76,Which library is used to connect to MongoDB Atlas?,Error generating answer: cannot schedule new futures after interpreter shutdown
+77,How is authentication handled in the backend?,Error generating answer: cannot schedule new futures after interpreter shutdown
+78,List at least five specific MongoDB Atlas collections mentioned and their purpose?,Error generating answer: cannot schedule new futures after interpreter shutdown
+79,Describe how farmer feedback is collected and used in real-time?,Error generating answer: cannot schedule new futures after interpreter shutdown
+80,How are market prices updated and utilized?,Error generating answer: cannot schedule new futures after interpreter shutdown
+81,"What is the purpose of the /api/upload endpoint, and what database collection does it interact with?",Error generating answer: cannot schedule new futures after interpreter shutdown
+82,Which endpoint is responsible for fetching personalized recommendations?,Error generating answer: cannot schedule new futures after interpreter shutdown
+83,How are current and historical market prices accessed?,Error generating answer: cannot schedule new futures after interpreter shutdown
+84,Where are FastAPI endpoints typically defined within the backend/ structure?,Error generating answer: cannot schedule new futures after interpreter shutdown
+85,Where would you find Celery tasks?,Error generating answer: cannot schedule new futures after interpreter shutdown
+86,What is the purpose of the models/ directory in the backend?,Error generating answer: cannot schedule new futures after interpreter shutdown
+87,"Examine the provided FastAPI code snippet. What is its primary function, and how does it interact with MongoDB Atlas?",Error generating answer: cannot schedule new futures after interpreter shutdown
+88,How can the FastAPI application be run locally and scaled for production?,Error generating answer: cannot schedule new futures after interpreter shutdown
+89,What tools are suggested for API unit testing and load testing?,Error generating answer: cannot schedule new futures after interpreter shutdown
+90,"What model formats are used for deployment on edge devices, and what runtimes are used for inference?",Error generating answer: cannot schedule new futures after interpreter shutdown
+91,What two local storage options are mentioned for caching offline data on edge devices?,Error generating answer: cannot schedule new futures after interpreter shutdown
+92,Describe the workflow for delivering offline recommendations?,Error generating answer: cannot schedule new futures after interpreter shutdown
+93,"What tools are used for tracking API latency, model performance, and system health, and where are metrics stored?",Error generating answer: cannot schedule new futures after interpreter shutdown
+94,"How are experiments tracked locally, and how is metadata synced for multi-user setups?",Error generating answer: cannot schedule new futures after interpreter shutdown
+95,Where are model cards stored?,Error generating answer: cannot schedule new futures after interpreter shutdown
+96,"What platform is used for CI/CD, and what checks are performed before deployment?",Error generating answer: cannot schedule new futures after interpreter shutdown
+97,How are staged deployments with rollback triggers implemented?,Error generating answer: cannot schedule new futures after interpreter shutdown
+98,Where are alerts and system logs stored?,Error generating answer: cannot schedule new futures after interpreter shutdown
+99,List the key deliverables for the Minimum Viable Product?,Error generating answer: cannot schedule new futures after interpreter shutdown
+100,"What specific dataset is used, and how is it organized?",Error generating answer: cannot schedule new futures after interpreter shutdown
+101,"What type of model is trained, and what framework is used?",Error generating answer: cannot schedule new futures after interpreter shutdown
+102,How is farmer feedback collected and synced?,Error generating answer: cannot schedule new futures after interpreter shutdown
+103,What new predictive capabilities are added in Phase 2?,Error generating answer: cannot schedule new futures after interpreter shutdown
+104,Where are the models and data for these new capabilities stored?,Error generating answer: cannot schedule new futures after interpreter shutdown
+105,What advanced data integration is planned for Phase 3?,Error generating answer: cannot schedule new futures after interpreter shutdown
+106,What new frontend features are introduced?,Error generating answer: cannot schedule new futures after interpreter shutdown
+107,What aspects of CI/CD and MLOps are fully implemented during enterprise rollout?,Error generating answer: cannot schedule new futures after interpreter shutdown
+108,What is the strategy for launching with NGOs and government programs?,Error generating answer: cannot schedule new futures after interpreter shutdown
+109,How does the platform leverage MongoDB Atlas for cost efficiency in the MVP?,Error generating answer: cannot schedule new futures after interpreter shutdown
+110,What resources are utilized for free GPU access for model training?,Error generating answer: cannot schedule new futures after interpreter shutdown
+111,How do edge devices and SQLite contribute to the platform's cost efficiency?,Error generating answer: cannot schedule new futures after interpreter shutdown
+112,What is the overall cost-efficiency goal for the MVP?,Error generating answer: cannot schedule new futures after interpreter shutdown
+113,What is the primary purpose of MongoDB Atlas in this architecture?,Error generating answer: cannot schedule new futures after interpreter shutdown
+114,What is the purpose of SQLite on edge devices? Why is it preferred over MongoDB Atlas for local storage in this context?,Error generating answer: cannot schedule new futures after interpreter shutdown
+115,"Describe the complete combined workflow, from offline data capture to cloud synchronization and backend access?",Error generating answer: cannot schedule new futures after interpreter shutdown
+116,What are the key benefits of this combined strategy?,Error generating answer: cannot schedule new futures after interpreter shutdown
+117,"For AWS Open Data, what Python library would you use to access the data?",Error generating answer: cannot schedule new futures after interpreter shutdown
+118,"For Copernicus Open Access Hub, what specific Python library is mentioned for API interaction?",Error generating answer: cannot schedule new futures after interpreter shutdown
+119,"If live Sentinel-2 access is unavailable, how can satellite data be simulated locally for the MVP?",Error generating answer: cannot schedule new futures after interpreter shutdown
+120,"What types of files are used for local simulation, and where are they stored?",Error generating answer: cannot schedule new futures after interpreter shutdown
+121,How are precomputed indices like NDVI handled?,Error generating answer: cannot schedule new futures after interpreter shutdown
+122,"For real-time weather data, which API is used, what is its usage limit, and where is the data stored?",Error generating answer: cannot schedule new futures after interpreter shutdown
+123,"What API is used for SMS/WhatsApp notifications, and what is its cost model (free vs. paid)?",Error generating answer: cannot schedule new futures after interpreter shutdown
+124,"How are market prices scraped, and where are they stored?",Error generating answer: cannot schedule new futures after interpreter shutdown
+125,Which library is used for asynchronous tasks?,Error generating answer: cannot schedule new futures after interpreter shutdown
+126,Which libraries are used for web scraping?,Error generating answer: cannot schedule new futures after interpreter shutdown
+127,What cloud resources are utilized for the free tier?,Error generating answer: cannot schedule new futures after interpreter shutdown
+128,"List three tools used for containerization, orchestration, and Infrastructure as Code (IaC)?",Error generating answer: cannot schedule new futures after interpreter shutdown
+129,"What types of tests are performed (e.g., unit, integration), and what specific security checks are mentioned?",Error generating answer: cannot schedule new futures after interpreter shutdown
+130,"What are the three additional considerations for the platform's development, beyond core technical requirements?",Error generating answer: cannot schedule new futures after interpreter shutdown
+131,How does the summary reiterate the MVP's compatibility with free-tier resources?,Error generating answer: cannot schedule new futures after interpreter shutdown

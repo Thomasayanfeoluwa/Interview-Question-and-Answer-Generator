@@ -352,4 +352,4 @@ def answer_questions_and_write(ans_gen_chain, filtered_questions, retriever, llm
             f.write("-" * 60 + "\n\n")
 
         # 7) Rate limit pause
-        time.sleep(6)
+        time.sleep(12)
