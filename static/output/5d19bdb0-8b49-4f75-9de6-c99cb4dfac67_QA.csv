@@ -1,0 +1,86 @@
+Question,Answer
+What is the primary goal of the AI Crop Monitoring and Disease Detection Platform described in this blueprint?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+What are the two key design principles mentioned for this platform regarding its target user base and initial development resources?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+List the four primary categories of data inputs the platform aggregates for robust analysis?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"For disease detection training, which specific dataset is mentioned as a source?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+Which free-tier API is utilized for obtaining weather data?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+What specific satellite data sources are planned for integration in later phases?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"What are the three types of camera inputs supported by the system, and which open-source library is commonly associated with handling smartphone/webcam and IP camera inputs?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+What is the core ML/DL framework chosen for developing the platform's models?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+Which three techniques are listed for providing Explainability (XAI) in the platform?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+List the three specific models/frameworks mentioned for Time-Series Forecasting?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+What key factors are integrated into the Yield Forecasting models?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+Which Python framework is used for building the main backend API layer?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+What technology stack (framework + message broker) is used for handling asynchronous and heavy background jobs like inference and batch processing?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+What framework is chosen for the Minimum Viable Product (MVP) frontend dashboards?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"For the production frontend, what specific technologies are planned, and where can it be deployed for free?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"Which database is chosen for structured data, and what free-tier options are mentioned for it?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+Which database is used for unstructured data such as image metadata and logs?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"What Google Cloud Platform (GCP) service is utilized for analytics, and does it offer a free tier?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+What technology is used specifically for caching frequently accessed data?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"Where are large binary objects like images, trained models, and documents stored?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+Which service is used for sending SMS/WhatsApp notifications?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"Which API is used for email notifications, and is it available on a free tier?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"What service is used for user authentication (e.g., for farmers, admins, partners)?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+What containerization technology is used to package the application?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+Which platform is used for implementing CI/CD pipelines (for tests and deployment)?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"For short-term, free, and serverless deployment, what specific GCP service is utilized?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+What is the long-term deployment strategy for achieving high scalability and reliability?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+Which open-source tools are used for performance monitoring?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"What service is used for error logging, and does it offer a free tier?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+What security measure is explicitly mentioned for database storage?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+How is Personally Identifiable Information (PII) and farm data secured at rest?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+What is the recommended practice for managing API keys and secrets to enhance security?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+What is the retention policy for audit logs of API/model decisions?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+What compliance standard is mentioned for data handling practices?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+List at least five high-impact features that distinguish this platform from competitors?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+Which specific tools are mentioned for market/supply data scraping?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+How is multi-language support achieved within the platform?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"What critical problem does the platform aim to solve for smallholder and mid-size farms, as stated in the value proposition?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+Describe the three main business models proposed for monetizing the platform?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"List at least two KPIs for each of the following categories: Model Performance, Operational, Adoption, and Economics?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+What is the primary impact metric mentioned for the platform?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"Given the `AI_Crop_Monitoring_Disease_Detection/` directory, where would you expect to find the main FastAPI application file?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+In which directory would you place Jupyter notebooks for tasks like data preprocessing and model training?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"Where are the Dockerfile and Kubernetes configuration files (e.g., `deployment.yaml`) located within the project structure?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"If you needed to add a new API route for a payment gateway, which file in the `backend/api/` directory would you likely modify or create a new one alongside?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"Based on the System Architecture diagram, what are the two main frontend technologies used?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"Which component acts as the central API layer, connecting the frontend to the backend services?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"How does the system support ""Edge Devices"" according to the architecture diagram?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"*   What is the duration of Phase 1, and what is a key constraint regarding resource usage?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"*   Which specific ML model is trained in this phase, and for what purpose?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"*   What is the chosen frontend framework for the MVP, and where is it deployed?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+*   What is the duration of Phase 2?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"*   What security feature is implemented, and when is CI/CD with GitHub Actions introduced?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+*   What is the duration of Phase 3?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"*   Which frontend framework replaces Streamlit in this phase, and where is it deployed?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"*   What new predictive analytics capability is added, and what new monetization/community features are introduced?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+*   What is the duration of Phase 4?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"*   What is the major deployment migration in this phase, and which GCP service is added for large-scale analytics?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"*   When are Edge AI models launched, and for what purpose? What tool is introduced for Infrastructure as Code (IaC)?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"*   Why is `CORS_ORIGINS=*` set in the `.env` template, and what are the potential security implications of this in a production environment?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+*   Which environment variable holds the connection string for the PostgreSQL database?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+*   What are the three different payment gateway secret keys expected in the `.env` file?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"*   Describe the expected functionality of the `/predict` endpoint, including the type of input it accepts and the information it should return. What are the two `TODO` items for this endpoint?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+*   How is the FastAPI application run locally according to `main.py`?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+*   What is the primary purpose of the `run_inference` Celery task?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+*   How does the Celery worker determine its broker and backend URLs?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+*   How does the Streamlit app get the base URL for the FastAPI backend?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+*   What is the base image used for the Dockerfile?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+*   What is the purpose of `RUN pip install --no-cache-dir -r requirements.txt`?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+*   Why is `ENV PYTHONUNBUFFERED=1` set in the Dockerfile?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+*   What is the `kind` of resource being defined in `cloudrun.yaml`?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+*   Which Docker image is specified for deployment to Cloud Run?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"*   What is `containerConcurrency` set to, and what does this parameter signify for Cloud Run?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+*   When will the `build-deploy` job be triggered?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+*   What are the two main steps performed by the `gcloud builds submit` command?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+*   Which GitHub Secrets are explicitly required for this CI/CD pipeline to function correctly?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+*   Which packages are included specifically for explainable AI?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"For the risk ""Data Drift/New Diseases"", what are the proposed mitigations?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"How does the platform plan to address ""Connectivity Gaps"" in rural areas?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+What types of tests are recommended for the platform in the QA and MLOps Essentials section?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"What is the purpose of a ""Model Registry"" in MLOps?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"Explain ""Canary Releases"" in the context of model deployment?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+"Before MVP Go-Live, what are the minimum functional requirements for the FastAPI backend?",Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+What is the expected inference time for the model on CPU before MVP Go-Live?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.
+Which monitoring and error logging tools should be active and configured before MVP Go-Live?,Error generating answer: The input to RunnablePassthrough.assign() must be a dict.

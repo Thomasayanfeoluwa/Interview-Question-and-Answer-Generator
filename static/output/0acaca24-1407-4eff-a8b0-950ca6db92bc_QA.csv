@@ -1,0 +1,68 @@
+Question,Answer
+What is the primary objective of the AI Crop Monitoring and Disease Detection Platform described in this blueprint?,"The platform addresses the critical issue of 20-40% yield losses in small-holder and mid-size farms due to diseases, pests, and timing errors. It provides an end-to-end solution for disease detection, decision explanation (XAI), yield/weather forecasting, actionable recommendations, alerts, and connections to payments/microfinance."
+What key design principle is emphasized for the initial development phase of the platform?,Leveraging free-tier resources.
+"List the four primary external data sources the platform aggregates for robust analysis, and name a specific dataset or API for each?","The four primary external data sources the platform aggregates for robust analysis are: Crop Images (PlantVillage Dataset), Soil Data (FAO Soil Database), Weather Data (OpenWeatherMap API), and Satellite Data (Google Earth Engine)."
+Which data source is planned for integration in a later phase?,Drone Data.
+"Describe the three types of camera inputs supported by the system. For smartphone/webcam and IP camera inputs, name the specific tools/libraries mentioned for their integration?","The system supports three types of camera inputs: Smartphone/Webcam, IP Camera, and Drone Camera. For Smartphone/Webcam inputs, OpenCV and Streamlit/Gradio are mentioned for uploads. For IP Camera inputs, OpenCV + FFmpeg are mentioned."
+What is the core Machine Learning/Deep Learning framework chosen for the platform?,PyTorch
+Name the three Explainability (XAI) frameworks integrated into the platform. What is their purpose?,"SHAP, LIME, and Grad-CAM are the three Explainability (XAI) frameworks integrated into the platform. Their purpose is for decision explanation and to build trust."
+What are the two main types of predictive analytics offered by the platform?,Time-Series Forecasting and Yield Forecasting.
+"For Time-Series Forecasting, which specific models/libraries are mentioned?","Prophet, ARIMA (statsmodels), LSTM (PyTorch)."
+What data points are integrated into the Yield Forecasting models?,"Models integrating weather, crop health, and historical data."
+What is the main backend framework used for the API layer?,FastAPI
+"How are asynchronous and heavy background jobs (like inference or batch processing) handled in the backend, and which technologies facilitate this?",Async/Heavy Jobs are handled by Celery + Redis for background inference and batch jobs.
+"What frontend technology is used for the Minimum Viable Product (MVP), and what is planned for the production frontend? Where can the production frontend be deployed for free?",MVP: Streamlit (prototype dashboards). Production: React (Next.js) + Tailwind CSS. The production frontend can be deployed free on Vercel.
+"Which database is used for unstructured data such, as images metadata and logs?",MongoDB Atlas
+"What technology is used for large-scale analytics, and which cloud provider offers a free tier for it?",BigQuery (GCP free tier).
+What is the role of Redis in this architecture?,"Redis is used for caching, including caching predictions and hot endpoints, and for handling async/heavy jobs like background inference and batch jobs in conjunction with Celery."
+"Where are large binary objects like images, trained models, and documents stored?",GCP Cloud Storage
+"Which services are used for sending SMS/WhatsApp and email notifications, respectively?","SMS/WhatsApp: Twilio sandbox, Email: Gmail API."
+"What authentication service is used for managing user access (farmers, admins, partners)?",Firebase Auth
+What containerization technology is fundamental to the deployment process?,Docker
+Which CI/CD tool is used for automated tests and deployment?,GitHub Actions
+"Describe the short-term deployment strategy, including the specific GCP service used and its benefits?","The short-term deployment strategy involves using GCP Cloud Run, which is free and serverless."
+What is the long-term deployment strategy for the platform?,Migrate deployment to GKE (Kubernetes).
+"Which tools are used for performance monitoring and error logging, respectively?",Performance Monitoring: Prometheus + Grafana. Error Logging: Sentry.
+What security measures are mentioned regarding database storage and GDPR compliance?,"Encrypted DB storage, GDPR compliance, encrypting PII & Farm Data at rest (Postgres TDE or KMS), field-level access controls, GDPR-style consent, data deletion on request, and minimal data collection."
+How are API keys and secrets managed to enhance security?,"GCP Secret Manager, no committed secrets."
+"What is the policy for audit logs, including retention?","Append-only store for API/model decisions, retain ≥ 12 months."
+Describe the backup strategy for databases?,"Daily Postgres + Mongo snapshots, monthly restore tests."
+List at least five key features that differentiate this platform from competitors?,"Edge AI for offline farm inference, multi-language support, market/supply data scraping, climate insights, community features, explainable AI, and gamification."
+"Explain the concept of ""Edge AI"" in the context of this platform and its benefit?","Edge AI involves using frameworks such as TensorFlow Lite, ONNX, and PyTorch Mobile, and its benefit is to enable offline farm inference, which helps address connectivity gaps."
+What are the three primary business models proposed for the platform's monetization?,"SaaS subscriptions, transaction fees, and enterprise/NGO contracts for analytics."
+"For the risk of ""Data Drift/New Diseases,"" what mitigation strategies are proposed?","Scheduled evaluation, active learning, human-in-loop review."
+"How does the platform address ""Connectivity Gaps"" in rural or remote areas?","Edge deployment (TFLite/ONNX), store-and-forward sync."
+"What strategies are in place to build ""Trust/False Positives"" and ensure conservative alerts?","XAI overlays, confidence thresholds, conservative alerts."
+"How is ""Vendor Lock-in"" mitigated in the deployment strategy?","Containerized workloads, IaC, multi-cloud-ready."
+"Where would you find the main entry point for the FastAPI backend, and where are the Celery worker tasks defined?","The main entry point for the FastAPI backend is found in `main.py`, and the Celery worker tasks are defined in `tasks inference.py`."
+"According to the `System Architecture` diagram, how do ""Farmers / Apps"" interact with the ""FastAPI Backend""?","Farmers / Apps upload images to the Frontend (UI) Streamlit / React, which then interacts with the FastAPI Backend (Main API Layer)."
+"In the architecture, where are ML models deployed for cloud inference versus edge inference?","For cloud inference, ML models are deployed on GCP Cloud Run and GKE/K8s. For edge inference, ML models are deployed on Edge Devices (TFLite, ONNX, Pi) for offline farm inference."
+*   What is the duration of this phase?,Not found in context.
+"*   Which frontend technology is replaced, and with what?",Streamlit is replaced with React (Next.js + Tailwind CSS).
+"*   What new functionalities are added related to payments, forecasting, and community?","Integrate payments with Stripe and Flutterwave, add yield forecasting (Prophet + LSTM), add market data scraping, and introduce community/forum module."
+"*   What is the major deployment migration in this phase, and what new tools are introduced for infrastructure management?",Migrate deployment to GKE (Kubernetes) and use Terraform for Infrastructure as Code.
+"*   What advanced AI feature is launched, and what new data sources are integrated?","Advanced AI feature launched is Edge AI models for offline farms. New data sources integrated include market data scraping, satellite data, and drone data."
+"*   Which API keys are needed for OpenWeatherMap, Firebase, and Stripe?","OPENWEATHER_API_KEY, FIREBASE_PROJECT_ID, FIREBASE_WEB_API_KEY, STRIPE_SECRET_KEY."
+*   How are Twilio and Gmail API credentials typically stored in this setup?,GCP Secret Manager.
+*   How is Cross-Origin Resource Sharing (CORS) configured in the FastAPI application?,"The FastAPI application is configured with CORSMiddleware, allowing all origins (`allow_origins=[""*""]`), credentials (`allow_credentials=True`), all methods (`allow_methods=[""*""]`), and all headers (`allow_headers=[""*""]`)."
+*   How is the FastAPI application run locally?,"uvicorn.run(app, host=""0.0.0.0"", port=8080)"
+"*   How does the Celery worker connect to its message broker and backend, and what is the default fallback URL?","The Celery worker connects to its message broker and backend using the `REDIS_URL` environment variable, with a default fallback URL of `redis://localhost:6379/0`."
+*   What are the expected steps within the `run_inference` task?,"load model, preprocess, predict, save result to DB"
+*   How does the Streamlit application interact with the FastAPI backend for predictions and weather data?,"The Streamlit application interacts with the FastAPI backend by making HTTP requests. For predictions, it sends a POST request with the uploaded image file to the `/predict` endpoint of the FastAPI backend. For weather data, it sends a GET request with latitude and longitude parameters to the `/weather` endpoint of the FastAPI backend."
+*   How are secrets like `API_BASE` accessed within the Streamlit application?,`API_BASE` is accessed using `st.secrets.get()`.
+"*   What is the base image used, and what is the working directory inside the container?","FROM python:3.11-slim
+WORKDIR /app"
+*   What command is executed when the Docker container starts?,"CMD [""python"", ""src/backend/main.py""]"
+*   What is the `kind` of resource being defined in this YAML file?,Service
+"*   How is the Docker image specified for deployment, and what is the significance of `containerConcurrency`?",Not found in context.
+*   When is this CI/CD workflow triggered?,"on push: branches: [ ""main"" ]"
+"*   What are the main steps involved in the `build-deploy` job, from checkout to deployment?","The main steps involved in the `build-deploy` job are checking out the repository, setting up gcloud, submitting a gcloud build with a tag, and deploying the service to gcloud run."
+*   How are Google Cloud credentials handled securely in this workflow?,"GCP Secret Manager is used for keys and secrets, and no secrets are committed."
+"*   Which libraries are specifically for database interaction (PostgreSQL, MongoDB, Redis)?","psycopg2-binary, pymongo, redis"
+*   Which library is used for the Streamlit frontend?,Streamlit
+What types of testing are included in the QA process for this platform?,"Unit tests (models/utils), API contract tests, smoke tests post-deploy."
+What functionalities are expected from the Model Registry?,"Version models, store metrics, roll back on degradation."
+How are new model versions deployed safely to minimize risk?,Canary Releases: Route small % traffic to new model.
+"How is model performance degradation detected, and what action does it trigger?","Model performance degradation is detected by monitoring feature distributions, which triggers retraining."
+List at least five critical items from the MVP Go-Live Checklist that must be functional before launch?,"FastAPI /health, /predict, /weather endpoints working in Cloud Run; Model packaged, GPU-free inference <1s on CPU; Streamlit MVP online; image upload and weather view functional; Postgres with basic tables (farms, images, predictions, feedback); Redis running; cache hot endpoints."
+What is the target inference time for the model on CPU for the MVP?,"Model packaged, GPU-free inference <1s on CPU."
