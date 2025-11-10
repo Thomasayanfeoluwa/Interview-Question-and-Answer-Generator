@@ -1,11 +1,9 @@
-# helper.py (corrected & production-ready)
 from dotenv import load_dotenv
 import os
 import re
 import time
-from src.prompt import *   # prompt_template, refine_template, ANSWER_PROMPT expected here
+from src.prompt import *   
 
-# LangChain / Google GenAI imports
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import TokenTextSplitter
 from langchain_core.documents import Document
@@ -19,12 +17,16 @@ from langchain_classic.chains import RetrievalQA
 from langchain_classic.chains.combine_documents import create_stuff_documents_chain
 from langchain_classic.chains.retrieval import create_retrieval_chain
 
-# Ensure environment variables
+
+
+
+
 load_dotenv()
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 if not GOOGLE_API_KEY:
     raise RuntimeError("GOOGLE_API_KEY not found in environment. Set it in .env.")
 os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
+
 
 
 def file_preprocessing(file_path):
@@ -76,7 +78,6 @@ def llm_pipeline(file_path):
       - filter & normalize generated questions
       - returns: ans_gen_chain (retrieval chain ready to invoke), filtered_questions (list)
     """
-
     #  File preprocessing
     docs_ques_gen, docs_ans_gen = file_preprocessing(file_path)
 

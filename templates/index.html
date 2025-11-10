@@ -205,7 +205,7 @@ function addQAToList(index, question, answer) {
     qaItems.appendChild(qaItem);
     qaItems.scrollTop = qaItems.scrollHeight;
     
-    // Update total generated count
+    // Update total generated count - use allQAs length for real-time updates
     totalGenerated.textContent = allQAs.length;
 }
 
@@ -329,7 +329,11 @@ async function pollJobStatus(jobId) {
         qaList.style.display = "block";
         
         // Update the total generated count in the header
-        totalGenerated.textContent = allQAs.length;
+        if (lastData && lastData.total_questions) {
+    totalGenerated.textContent = lastData.total_questions;
+} else {
+    totalGenerated.textContent = allQAs.length;
+}
         
         // Ensure download link is set
         if (lastData && lastData.file) {
@@ -364,11 +368,11 @@ async function pollJobStatus(jobId) {
         }
         
         Swal.fire({ 
-            icon: 'success', 
-            title: 'Success!', 
-            text: `Generated ${allQAs.length} questions and answers successfully!` 
+        icon: 'success', 
+        title: 'Success!', 
+        text: `Generated ${lastData.total_questions} questions and answers successfully!`  // ✅ This shows 25
         });
-        
+            
     } else if (status === "failed") {
         statusText.textContent = "Processing failed";
         progressSection.style.display = "none";

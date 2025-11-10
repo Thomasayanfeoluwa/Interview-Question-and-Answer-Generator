@@ -157,17 +157,28 @@ def main():
     st.markdown('<h1 class="main-header">📚 AI Document Analyzer</h1>', unsafe_allow_html=True)
     st.markdown("### Transform PDF documents into professional Q&A interviews")
     
+    # Detect theme colors automatically
+    bg_color = "#F0F2F6" if st.get_option("theme.base") == "light" else "#0E1117"
+    text_color = "#000000" if st.get_option("theme.base") == "light" else "#FFFFFF"
+
     # Sidebar
     with st.sidebar:
         st.markdown("### ⚙️ Configuration")
-        st.markdown("""
-        <div class="info-box">
-        <strong>How it works:</strong><br>
-        1. Upload a PDF document<br>
-        2. AI analyzes the content<br>
-        3. Generate professional Q&A<br>
-        4. Download formatted CSV
-        </div>
+        st.markdown(f"""
+            <div style="
+                background-color: {bg_color};
+                color: {text_color};
+                padding: 10px;
+                border-radius: 8px;
+                font-size: 14px;
+                line-height: 1.6;
+            ">
+                <strong>How it works:</strong><br>
+                1. Upload a PDF document<br>
+                2. AI analyzes the content<br>
+                3. Generate professional Q&A<br>
+                4. Download formatted CSV
+            </div>
         """, unsafe_allow_html=True)
         
         st.markdown("### 📋 Supported Documents")
@@ -210,22 +221,44 @@ def main():
     
     with col2:
         st.markdown('<div class="sub-header">ℹ️ Instructions</div>', unsafe_allow_html=True)
+
+        # Instructions box
         st.markdown("""
-        <div class="info-box">
-        <strong>For best results:</strong><br><br>
-        ✅ Use well-structured PDF documents<br>
-        ✅ Ensure text is selectable (not scanned images)<br>
-        ✅ Documents should be in English<br>
-        ✅ Optimal length: 5-50 pages<br>
-        ✅ Clear formatting and headings<br><br>
-        
-        <strong>Output includes:</strong><br>
-        • Numbered questions & answers<br>
-        • Professional formatting<br>
-        • Clean, markdown-free text<br>
-        • Ready-to-use CSV format
+        <div style="
+            padding: 10px;
+            border-left: 4px solid #2c7be5;  /* Streamlit blue accent */
+            border-radius: 4px;
+            line-height: 1.6;
+        ">
+            <strong>For best results:</strong><br><br>
+            ✅ Use well-structured PDF documents<br>
+            ✅ Ensure text is selectable (not scanned images)<br>
+            ✅ Documents should be in English<br>
+            ✅ Optimal length: 5-50 pages<br>
+            ✅ Clear formatting and headings
         </div>
         """, unsafe_allow_html=True)
+
+        # Output includes box
+        st.markdown("""
+        <div style="
+            padding: 10px;
+            border-left: 4px solid #17a2b8;  /* info accent */
+            border-radius: 4px;
+            line-height: 1.6;
+            margin-top: 10px;
+        ">
+            <strong>Output includes:</strong><br>
+            <ul style="margin: 5px 0 0 15px; padding: 0;">
+                <li>Numbered questions & answers</li>
+                <li>Professional formatting</li>
+                <li>Clean, markdown-free text</li>
+                <li>Ready-to-use CSV format</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
+
+
 
 def process_document(uploaded_file):
     """Process the uploaded PDF document"""
@@ -375,12 +408,17 @@ def display_results(qa_data, original_filename):
     
     # Success message
     st.markdown(f"""
-    <div class="success-box">
-    <strong>✅ Successfully Generated {len(qa_data)} Questions!</strong><br>
-    Your document has been analyzed and professional Q&A pairs have been created.
+    <div style="
+        padding: 10px;
+        border-left: 4px solid #28a745;  /* green accent for success */
+        border-radius: 4px;
+        line-height: 1.6;
+    ">
+        <strong>✅ Successfully Generated {len(qa_data)} Questions!</strong><br>
+        Your document has been analyzed and professional Q&A pairs have been created.
     </div>
     """, unsafe_allow_html=True)
-    
+
     # Create DataFrame for display and download
     df = pd.DataFrame(qa_data)
     

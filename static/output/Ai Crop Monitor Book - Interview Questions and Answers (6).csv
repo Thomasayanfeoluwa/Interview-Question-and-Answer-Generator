@@ -1,0 +1,46 @@
+No.,Question,Answer
+1,What is the primary purpose of the AI Crop Monitoring & Agricultural Intelligence Platform?,Not found in context.
+2,How does the platform achieve both low-cost operation and scalability simultaneously?,Not found in context.
+3,"You are tasked with conducting exploratory data analysis (EDA) and model prototyping. In which directory should you place your scripts, and what tools are typically used in this phase?",Not found in context.
+4,Where is the production-ready code for modular components like recommendation engines and core business logic located?,Not found in context.
+5,"Which directory is specifically designated for scripts related to model training, evaluation, and export to formats like ONNX or TFLite?",Not found in context.
+6,"If you need to create documentation for farmers, administrators, or deployment engineers, which directory would you use, and what tools are recommended for generating this documentation?",Not found in context.
+7,"What types of tests are expected to be implemented in the tests/ directory, and what specific framework is suggested for unit tests?",Not found in context.
+8,Where would you find configurations for monitoring tools like Prometheus and Grafana?,Not found in context.
+9,"What types of multi-modal data inputs does the platform utilize, and why is this beneficial for prediction accuracy?",Not found in context.
+10,What tool is used to track data versions and ensure reproducibility?,Not found in context.
+11,How are these techniques integrated into the platform to build trust with farmers?,Not found in context.
+12,Describe the feedback loop mechanism for continuous learning?,Not found in context.
+13,"How is farmer feedback collected (both offline and online), and how often are models retrained?",Not found in context.
+14,How is offline inference enabled on edge devices?,Not found in context.
+15,"What specific model formats are used for deployment on mobile/edge devices, and where are the results stored locally?",Not found in context.
+16,"What models are suggested for yield forecasting, and where are they implemented?",Not found in context.
+17,How are the results of these models deployed and stored?,Not found in context.
+18,"How is market price data collected, and what type of machine learning model is applied to it?",Not found in context.
+19,"Which database collection stores this data, and how is its collection scheduled?",Not found in context.
+20,How does the platform implement GDPR-style logging?,Not found in context.
+21,What specific actions are taken to ensure farmer data privacy and allow data deletion?,Not found in context.
+22,"Explain the ""Edge AI & On-Farm Inference"" differentiator, including the technologies used for model deployment and inference?",Not found in context.
+23,"Describe how ""Adaptive Treatment Optimization"" is achieved, referencing the database and potential ML techniques?",Not found in context.
+24,"How does the platform integrate ""Satellite + Drone Fusion,"" and what libraries are used for image processing and alignment? Where is the metadata stored?",Not found in context.
+25,"What is the ""Farm Health Score,"" how is it computed, and where is it stored for display?",Not found in context.
+26,"How does the platform support ""Voice Interfaces"" for local languages, and where are voice command logs stored?",Not found in context.
+27,"What is the ""CI/CD for Models"" differentiator, and what specific checks are performed before models go live?",Not found in context.
+28,"What is manifest.csv used for, and what information does it contain?",Not found in context.
+29,"Beyond manifest.csv, what other tool is used for dataset versioning?",Not found in context.
+30,"What legal requirement is mentioned for farmer uploads, and how is it managed?",Not found in context.
+31,What are the minimum resolution and label taxonomy guidelines for annotations?,Not found in context.
+32,"How is inter-annotator agreement measured, and what is the target Cohen's Kappa score?",Not found in context.
+33,"What specific tool is used to define and run data validation tests (e.g., schema checks, file counts)?",Not found in context.
+34,How is data validation integrated into the CI/CD pipeline?,Not found in context.
+35,"What information should a model card (model-card.md) contain, and when is it generated?",Not found in context.
+36,"How is model tracking managed, and how is model metadata synced for multi-user access?",Not found in context.
+37,What tool is used to detect data distribution drifts after deployment?,Not found in context.
+38,"Under what condition is model retraining triggered, and how is this process automated?",Not found in context.
+39,How are sensitive secrets stored and accessed in the production environment?,Not found in context.
+40,Describe the data encryption strategy for both data at rest and in transit?,Not found in context.
+41,"What data retention policy is implemented, and how is old data purged?",Not found in context.
+42,What are the specified Service Level Objectives (SLOs) for latency and uptime?,Not found in context.
+43,"Name the primary tools used for monitoring, and where are the collected metrics stored?",Not found in context.
+44,What specific checks do GitHub Actions perform before merging code to production?,Not found in context.
+45,What condition would block a deployment?,Not found in context.
