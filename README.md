@@ -32,9 +32,10 @@ This project empowers candidates and recruiters alike by enabling:
 
 ## 🚀 Get Started Locally  
 ```bash
-git clone https://github.com/YourUsername/interview‑qa‑generator.git  
+git clone https://github.com/Thomasayanfeoluwa/Interview-Question-and-Answer-Generator
 cd interview‑qa‑generator  
 python3 -m venv venv  
 source venv/bin/activate  
 pip install -r requirements.txt  
 streamlit run app.py  
+
