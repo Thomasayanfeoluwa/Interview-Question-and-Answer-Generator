@@ -1,10 +1,7 @@
 # 🎙️ Interview Q&A Generator  
 *A polished AI‑driven tool to generate, simulate and review interview‑style questions & answers.*  
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn‑0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/idowu-thomas-56819433b)  
-[![Email](https://img.shields.io/badge/Email‑ayanfeoluwadegoke@gmail.com‑D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ayanfeoluwadegoke@gmail.com)  
-[![Built With Python](https://img.shields.io/badge/Built%20With‑Python‑3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)  
-[![Live Demo](https://img.shields.io/badge/Live‑Demo‑Streamlit‑4CAF50?style=for-the-badge&logo=streamlit&logoColor=white)](https://interview-question-and-answer-generator-j4mpehzjpa85pqhkmdbvpg.streamlit.app/)  
+[![Live Demo](https://interview-question-and-answer-generator-j4mpehzjpa85pqhkmdbvpg.streamlit.app/)  
 
 ---
 
@@ -38,3 +35,4 @@ python3 -m venv venv
 source venv/bin/activate  
 pip install -r requirements.txt  
 streamlit run app.py  
+
