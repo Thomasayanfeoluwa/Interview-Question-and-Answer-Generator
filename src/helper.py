@@ -1,9 +1,10 @@
-from dotenv import load_dotenv
 import os
 import re
 import time
 from src.prompt import *   
+import streamlit as st
 
+from dotenv import load_dotenv
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import TokenTextSplitter
 from langchain_core.documents import Document
@@ -19,13 +20,13 @@ from langchain_classic.chains.retrieval import create_retrieval_chain
 
 
 
+GOOGLE_API_KEY = st.secrets.get("GOOGLE_API_KEY")
 
-
-load_dotenv()
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 if not GOOGLE_API_KEY:
-    raise RuntimeError("GOOGLE_API_KEY not found in environment. Set it in .env.")
+    raise RuntimeError("GOOGLE_API_KEY not found in Streamlit secrets.")
 os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
+
+st.write("Google API key loaded:", "Yes" if GOOGLE_API_KEY else "No")
 
 
 
@@ -84,7 +85,7 @@ def llm_pipeline(file_path):
     #  LLM for question generation (Google Gemini)
     llm_ques_gen_pipeline = ChatGoogleGenerativeAI(
         temperature=0.3,
-        model="gemini-2.5-flash"
+        model="models/gemini-3-pro-preview"
     )
 
     # Prompts based on your src.prompt (expected variables imported above)
