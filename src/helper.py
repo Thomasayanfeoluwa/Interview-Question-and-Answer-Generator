@@ -85,7 +85,7 @@ def llm_pipeline(file_path):
     #  LLM for question generation (Google Gemini)
     llm_ques_gen_pipeline = ChatGoogleGenerativeAI(
         temperature=0.3,
-        model="models/gemini-3-pro-preview"
+        model="models/gemini-3-flash-preview"
     )
 
     # Prompts based on your src.prompt (expected variables imported above)
